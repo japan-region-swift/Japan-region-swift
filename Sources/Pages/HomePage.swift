@@ -14,5 +14,6 @@ struct HomePage: StaticPage {
     var body: some HTML {
         OriginXPost()
         Preamble()
+        DiscordServerAlert()
     }
 }
