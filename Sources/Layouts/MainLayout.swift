@@ -10,5 +10,10 @@ import Ignite
 
 struct MainLayout: Layout {
     var body: some HTML {
+        Body {
+            Header()
+                .padding(.bottom, 80)
+            content
+        }
     }
 }
