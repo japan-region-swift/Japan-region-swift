@@ -17,5 +17,7 @@ struct HomePage: StaticPage {
         DiscordServerAlert()
         Divider()
         UpcomingEventList()
+        Divider()
+        RegionList()
     }
 }
