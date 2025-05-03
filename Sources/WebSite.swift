@@ -28,8 +28,12 @@ struct WebSite: Site {
     var layout = MainLayout()
     var lightTheme: (any Theme)? = LightTheme()
     var darkTheme: (any Theme)? = DarkTheme()
-    var articlePages: [any ArticlePage] = []
+    var articlePages: [any ArticlePage] = [
+        BlogFeedPage()
+    ]
 
     func prepare() async throws {
+        let blogFeeds = try await BlogFeedFetcher.fetch()
+        BlogFeedCache.save(blogFeeds)
     }
 }
