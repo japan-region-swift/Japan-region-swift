@@ -14,6 +14,9 @@ struct MainLayout: Layout {
             Header()
                 .padding(.bottom, 80)
             content
+            Divider()
+            Footer()
+                .margin(.bottom, 80)
         }
     }
 }
