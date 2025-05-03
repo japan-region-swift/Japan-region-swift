@@ -15,5 +15,7 @@ struct HomePage: StaticPage {
         OriginXPost()
         Preamble()
         DiscordServerAlert()
+        Divider()
+        UpcomingEventList()
     }
 }
