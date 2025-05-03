@@ -1,23 +1,40 @@
+//
+//  BlogList.swift
+//  JapanRegionSwiftWebsite
+//
+//  Created by treastrain on 2025/04/28.
+//
+
 import Foundation
 import Ignite
 
-struct BlogsComponent: Component {
-    let navbar: NavBarModel
+struct BlogList: HTML {
+    var feeds = BlogFeedCache.load()
 
-    func body(context: PublishingContext) -> [any PageElement] {
-        Text("Blogs")
-            .font(.title2)
-            .id(NavigationOptions.blog.rawValue)
-        List {
-            Group {
-                for post in BlogPostList.posts {
-                    Link(target: post.link.absoluteString) {
-                        Text(post.displayName)
-                            .font(.title4)
+    var body: some HTML {
+        Section {
+            Text("参加者ブログ")
+                .font(.title2)
+            Grid(feeds) { feed in
+                Link(
+                    target: feed.url.absoluteString,
+                    content: {
+                        Card {
+                            Image(
+                                feed.imageURL!.absoluteString,
+                                description: feed.title
+                            )
+                            Link(
+                                feed.title,
+                                target: feed.url.absoluteString
+                            )
+                        }
                     }
-                }
+                )
+                .width(3)
             }
         }
-        .listStyle(.ordered(.default))
+        .horizontalAlignment(.center)
+        .padding(.vertical, .large)
     }
 }
