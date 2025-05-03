@@ -28,6 +28,7 @@ struct WebSite: Site {
     var layout = MainLayout()
     var lightTheme: (any Theme)? = LightTheme()
     var darkTheme: (any Theme)? = DarkTheme()
+    var favicon: URL? = URL(static: "/images/favicon.png")
     var articlePages: [any ArticlePage] = [
         BlogFeedPage()
     ]
