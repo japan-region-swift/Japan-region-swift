@@ -12,5 +12,6 @@ struct HomePage: StaticPage {
     var title = "Japan-\\(region).swift"
 
     var body: some HTML {
+        OriginXPost()
     }
 }
