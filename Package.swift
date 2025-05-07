@@ -11,8 +11,8 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/pzmudzinski/OpenGraphReader.git",
-            exact: "1.0.1"
+            url: "https://github.com/treastrain/OpenGraphReader",
+            branch: "support-foundation-networking"
         ),
     ],
     targets: [

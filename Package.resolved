@@ -1,5 +1,5 @@
 {
-  "originHash" : "fbeb3db426003beb3aca23d17830c78116e218ec7af107ee763efffde3a28cfe",
+  "originHash" : "f12de668de58f9fb400b22f0d69849593b06c6ffd59f067a0e87cdc148a5a96c",
   "pins" : [
     {
       "identity" : "ignite",
@@ -13,10 +13,10 @@
     {
       "identity" : "opengraphreader",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pzmudzinski/OpenGraphReader.git",
+      "location" : "https://github.com/treastrain/OpenGraphReader",
       "state" : {
-        "revision" : "790470f4c1d89d7765123be6c0d78bd4d64ea1ea",
-        "version" : "1.0.1"
+        "branch" : "support-foundation-networking",
+        "revision" : "9c990d04431728273eb79467da21fb86f5527131"
       }
     },
     {
