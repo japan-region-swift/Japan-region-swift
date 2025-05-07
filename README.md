@@ -4,7 +4,7 @@
 
 OGP（Open Graph Protocol）に対応している Web ページを「参加者ブログ」セクションに追加できます。`Content/blog-feeds` ディレクトリ内に、以下の形式で Markdown ファイルを作成してください。
 
-- ファイル名はページ URL のスキーマを取り除き、`/` を `:` に置換したものにしてください
+- ファイル名はページ URL のスキーマを取り除き、`/` を `_` に置換したものにしてください
     - ただし URL の末尾に `/` がある場合は、ファイル名からは取り除いてください
 - `url` フィールドには OGP（Open Graph Protocol）に対応したページの URL を記載してください
 - `date` フィールドにはページの公開日時を記載してください
@@ -20,7 +20,7 @@ date: yyyy-MM-dd HH:mm:ss
 ### サンプル
 ページ URL が `https://blog.treastrain.jp/articles/7110008404105c/` の場合:
 
-**ファイル名: `blog.treastrain.jp:articles:7110008404105c.md`**
+**ファイル名: `blog.treastrain.jp_articles_7110008404105c.md`**
 
 ```md
 ---
