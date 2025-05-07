@@ -1,5 +1,5 @@
 {
-  "originHash" : "2402c0efdcb1acb84a981833b3c89d004fd43662d559e43ba1e4000117df1ecd",
+  "originHash" : "fbeb3db426003beb3aca23d17830c78116e218ec7af107ee763efffde3a28cfe",
   "pins" : [
     {
       "identity" : "ignite",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/twostraws/Ignite",
       "state" : {
         "branch" : "main",
-        "revision" : "557cc7bb7ed5c983e4f64d59f34ee64163b894d3"
+        "revision" : "dc47b87dda90a81948652d8adcf1242eaa8ef307"
       }
     },
     {
