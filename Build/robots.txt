@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://japan-region-swift.github.io/Japan-region-swift/sitemap.xml

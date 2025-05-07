@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+    branches: [ "renewal-develop" ]
+  pull_request:
+    branches: [ "renewal-develop" ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show Swift version
+      run: swift --version
+    - name: Show Swift Package Manager version
+      run: swift package --version
+    - uses: actions/checkout@v4
+    - name: Build
+      run: swift build -v

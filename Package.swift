@@ -1,17 +1,28 @@
-// swift-tools-version: 5.9
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 6.1
 
 import PackageDescription
 
 let package = Package(
-    name: "Japan-Region-Swift",
-    platforms: [.macOS(.v13)],
+    name: "JapanRegionSwiftWebsite",
+    platforms: [.macOS(.v15)],
     dependencies: [
-        .package(url: "https://github.com/twostraws/Ignite.git", branch: "main")
+        .package(
+            url: "https://github.com/twostraws/Ignite",
+            branch: "main"
+        ),
+        .package(
+            url: "https://github.com/treastrain/OpenGraphReader",
+            branch: "support-foundation-networking"
+        ),
     ],
     targets: [
         .executableTarget(
-            name: "Japan-Region-Swift",
-            dependencies: ["Ignite"]),
-    ]
+            name: "Website",
+            dependencies: [
+                .product(name: "Ignite", package: "Ignite"),
+                .product(name: "OpenGraphReader", package: "opengraphreader"),
+            ]
+        )
+    ],
+    swiftLanguageModes: [.v6]
 )
