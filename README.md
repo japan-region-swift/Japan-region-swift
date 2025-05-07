@@ -1,5 +1,7 @@
 # [japan-region-swift.github.io](https://japan-region-swift.github.io)
 
+[![Build](https://github.com/japan-region-swift/Japan-region-swift/actions/workflows/build.yml/badge.svg)](https://github.com/japan-region-swift/Japan-region-swift/actions/workflows/build.yml)
+
 ## イベント参加者ブログ等記事の追加手順
 
 OGP（Open Graph Protocol）に対応している Web ページを「参加者ブログ」セクションに追加できます。`Content/blog-feeds` ディレクトリ内に、以下の形式で Markdown ファイルを作成してください。
