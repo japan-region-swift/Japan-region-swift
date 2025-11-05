@@ -1,10 +1,10 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 6.2
 
 import PackageDescription
 
 let package = Package(
     name: "JapanRegionSwiftWebsite",
-    platforms: [.macOS(.v15)],
+    platforms: [.macOS(.v26)],
     dependencies: [
         .package(
             url: "https://github.com/twostraws/Ignite",
@@ -21,6 +21,9 @@ let package = Package(
             dependencies: [
                 .product(name: "Ignite", package: "Ignite"),
                 .product(name: "OpenGraphReader", package: "opengraphreader"),
+            ],
+            swiftSettings: [
+                .treatAllWarnings(as: .error),
             ]
         )
     ],
