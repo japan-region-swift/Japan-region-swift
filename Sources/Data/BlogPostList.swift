@@ -2,6 +2,10 @@ import Foundation
 
 enum BlogPostList {
     static let posts: [BlogPost] = [
+        BlogPost(displayName: "Kanagawa.swift #2 にスタッフとして参加しました", link: URL(string: "https://note.com/fromkk/n/n3002971efcd7?sub_rt=share_pb")!),
+        BlogPost(displayName: "Kanagawa.swift #2を開催しました！", link: URL(string: "https://note.com/hinakkograshi/n/nfcfea6f9eb74?app_launch=false")!),
+        BlogPost(displayName: "Kanagawa.swift #2 がカヤックオフィスで開催されました ", link: URL(string: "https://techblog.kayac.com/report-kanagawa-swift-2")!),
+        BlogPost(displayName: "HAKATA.swift feat. Japan-region.swift #1を開催しました", link: URL(string: "https://note.com/shiz_t/n/ne1723bb4408c")!),
         BlogPost(displayName: "Nagoya.swift＃1やりました #nagoya_swift", link: URL(string: "https://note.com/asashin227/n/nfcfb0b207045")!),
         BlogPost(displayName: "Nagoya.swift#1 開催までのあれこれ", link: URL(string: "https://note.com/carpediemzzz/n/naae22795e97f")!),
         BlogPost(displayName: "Nagoya.swiftに行ってきました", link: URL(string: "https://note.com/1mash0/n/n841b3e6cd80e")!),
