@@ -9,14 +9,14 @@ import Foundation
 import Ignite
 
 protocol Region: Identifiable, Hashable, Sendable {
-    var id: String { get }
-    var name: String { get }
-    var tags: [String] { get }
-    var color: Color { get }
-    var code: String { get }
-    var isInPreparation: Bool { get }
+    nonisolated var id: String { get }
+    nonisolated var name: String { get }
+    nonisolated var tags: [String] { get }
+    nonisolated var color: Color { get }
+    nonisolated var code: String { get }
+    nonisolated var isInPreparation: Bool { get }
 }
 
 extension Region {
-    var isInPreparation: Bool { false }
+    nonisolated var isInPreparation: Bool { false }
 }

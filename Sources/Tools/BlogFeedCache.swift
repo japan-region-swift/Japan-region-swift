@@ -8,7 +8,7 @@
 import Foundation
 import Synchronization
 
-struct BlogFeedCache: Sendable {
+nonisolated enum BlogFeedCache: Sendable {
     private static let cache = Mutex<[BlogFeed]>([])
 
     static func save(_ feeds: [BlogFeed]) {

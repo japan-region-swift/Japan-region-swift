@@ -19,14 +19,18 @@ struct DiscordServerAlert: HTML {
                     " は Discord サーバーをメインに交流しています"
                 }
                 .horizontalAlignment(.center)
+                .padding(.vertical, 10)
                 .width(9)
-                Link(
-                    Label("Discord に参加", systemImage: "discord"),
-                    target: "https://tret.jp/JapanRegionSwiftDiscord"
-                )
-                .linkStyle(.button)
-                .role(.discordPrimary)
+                Text {
+                    Link(
+                        Label("Discord に参加", systemImage: "discord"),
+                        target: "/join"
+                    )
+                    .linkStyle(.button)
+                    .role(.discordPrimary)
+                }
                 .horizontalAlignment(.center)
+                .padding(.vertical, 10)
                 .width(3)
             }
         }

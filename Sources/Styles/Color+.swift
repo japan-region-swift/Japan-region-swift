@@ -9,5 +9,5 @@ import Foundation
 import Ignite
 
 extension Color {
-    static let swift = Color(hex: "#F05138")
+    nonisolated static let swift = Color(hex: "#F05138")
 }

@@ -13,7 +13,7 @@ enum BadgeStyleRole: Sendable {
 }
 
 extension Badge {
-    func badgeStyle(_ style: BadgeStyleRole) -> some HTML {
+    func badgeStyle(_ style: BadgeStyleRole) -> some InlineElement {
         switch style {
         case .swiftPrimarySubtleBordered:
             self.role(.primary)
@@ -24,9 +24,7 @@ extension Badge {
 }
 
 private struct SwiftPrimarySubtleBorderedBadgeStyle: Style {
-    func style(content: StyledHTML, environment: EnvironmentConditions)
-        -> StyledHTML
-    {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
         switch environment.colorScheme {
         case .light, nil:
             content

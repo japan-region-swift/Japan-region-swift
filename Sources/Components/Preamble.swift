@@ -22,7 +22,7 @@ struct Preamble: HTML {
                 .style(.wordBreak, "keep-all")
                 .style(.overflowWrap, "break-word")
             }
-            .font(.system(.title1, size: .rem(1.75)))
+            .font(.system(.title1, size: .rem(1.5)))
             .lineSpacing(.standard)
         }
         .horizontalAlignment(.center)

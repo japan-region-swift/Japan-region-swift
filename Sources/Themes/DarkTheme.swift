@@ -10,7 +10,7 @@ import Ignite
 
 struct DarkTheme: Theme {
     var colorScheme: ColorScheme = .dark
-    var background = Color(hex: "#000000")
+    var background = Color(hex: "#010101")
     var secondaryBackground = Color(hex: "#161616")
     var tertiaryBackground = Color(hex: "#2A2A2A")
     var link = Color.swift
