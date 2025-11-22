@@ -8,7 +8,7 @@
 import Foundation
 import Ignite
 
-struct Kyoto: Region {
+nonisolated struct Kyoto: Region {
     var id = "kyoto"
     var name = "Kyoto.swift"
     var tags = ["京都", "近畿", "関西"]
@@ -19,5 +19,5 @@ struct Kyoto: Region {
 }
 
 extension Region where Self == Kyoto {
-    static var kyoto: Self { Self() }
+    nonisolated static var kyoto: Self { Self() }
 }

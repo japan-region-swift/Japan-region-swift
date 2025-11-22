@@ -23,9 +23,7 @@ extension Alert {
 }
 
 private struct SwiftPrimaryAlertStyle: Style {
-    func style(content: StyledHTML, environment: EnvironmentConditions)
-        -> StyledHTML
-    {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
         switch environment.colorScheme {
         case .light, nil:
             content

@@ -8,7 +8,7 @@
 import Foundation
 
 enum JapanRegion {
-    static func all(includesInPreparation: Bool = false) -> [any Region] {
+    nonisolated static func all(includesInPreparation: Bool = false) -> [any Region] {
         [
             .hakodate,
             .chiba,

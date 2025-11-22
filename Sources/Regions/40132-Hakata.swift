@@ -8,7 +8,7 @@
 import Foundation
 import Ignite
 
-struct Hakata: Region {
+nonisolated struct Hakata: Region {
     var id = "hakata"
     var name = "HAKATA.swift"
     var tags = ["博多", "福岡", "九州"]
@@ -17,5 +17,5 @@ struct Hakata: Region {
 }
 
 extension Region where Self == Hakata {
-    static var hakata: Self { Self() }
+    nonisolated static var hakata: Self { Self() }
 }

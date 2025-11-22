@@ -6,22 +6,18 @@
 //
 
 import Foundation
-@preconcurrency import OpenGraphReader
+import OpenGraphReader
 
-struct ArticleFetcher: Sendable {
-    let ogpReader = OpenGraphReader()
-
-    func fetch(url: URL) async throws -> (
+nonisolated enum ArticleFetcher: Sendable {
+    @concurrent
+    static func fetch(url: URL) async throws -> (
         url: URL, title: String, imageURL: URL?
     ) {
+        let ogpReader = OpenGraphReader()
         let response = try await ogpReader.fetch(url: url)
         let url = response.url ?? url
         let title = response.title ?? url.absoluteString
         let imageURL = response.imageSecureURL ?? response.imageURL
-        return (
-            url: url,
-            title: title,
-            imageURL: imageURL
-        )
+        return (url: url, title: title, imageURL: imageURL)
     }
 }

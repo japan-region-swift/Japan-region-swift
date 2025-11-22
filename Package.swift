@@ -1,14 +1,14 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 6.2
 
 import PackageDescription
 
 let package = Package(
     name: "JapanRegionSwiftWebsite",
-    platforms: [.macOS(.v15)],
+    platforms: [.macOS(.v26)],
     dependencies: [
         .package(
             url: "https://github.com/twostraws/Ignite",
-            branch: "main"
+            revision: "10ae60a317d6a96cccf8a575f1444070eddf4836"
         ),
         .package(
             url: "https://github.com/treastrain/OpenGraphReader",
@@ -21,6 +21,9 @@ let package = Package(
             dependencies: [
                 .product(name: "Ignite", package: "Ignite"),
                 .product(name: "OpenGraphReader", package: "opengraphreader"),
+            ],
+            swiftSettings: [
+                .treatAllWarnings(as: .error),
             ]
         )
     ],

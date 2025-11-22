@@ -8,7 +8,7 @@
 import Foundation
 import Ignite
 
-struct Kamiyama: Region {
+nonisolated struct Kamiyama: Region {
     var id = "kamiyama"
     var name = "神山.swift"
     var tags = ["神山", "徳島", "四国"]
@@ -17,5 +17,5 @@ struct Kamiyama: Region {
 }
 
 extension Region where Self == Kamiyama {
-    static var kamiyama: Self { Self() }
+    nonisolated static var kamiyama: Self { Self() }
 }

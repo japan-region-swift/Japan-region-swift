@@ -9,7 +9,7 @@ import Foundation
 import Ignite
 
 struct MainLayout: Layout {
-    var body: some HTML {
+    var body: some Document {
         Body {
             Header()
                 .padding(.bottom, 80)

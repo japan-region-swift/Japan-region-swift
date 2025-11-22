@@ -8,7 +8,7 @@
 import Foundation
 import Ignite
 
-struct Minokamo: Region {
+nonisolated struct Minokamo: Region {
     var id = "minokamo"
     var name = "Minokamo.swift"
     var tags = ["美濃加茂", "岐阜", "中部", "東海"]
@@ -17,5 +17,5 @@ struct Minokamo: Region {
 }
 
 extension Region where Self == Minokamo {
-    static var minokamo: Self { Self() }
+    nonisolated static var minokamo: Self { Self() }
 }

@@ -19,5 +19,8 @@ struct Footer: HTML {
         .margin(.top, .xLarge)
         Text("記載されている製品名、サービス名および会社名等は一般に各社の商標、登録商標です。")
             .horizontalAlignment(.center)
+        Text("Copyright © 2024-2025 Japan-\\(region).swift All rights reserved.")
+            .font(.xSmall)
+            .horizontalAlignment(.center)
     }
 }

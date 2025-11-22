@@ -9,9 +9,7 @@ import Foundation
 import Ignite
 
 struct HideWhenColorSchemeIsLight: Style {
-    func style(content: StyledHTML, environment: EnvironmentConditions)
-        -> StyledHTML
-    {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
         switch environment.colorScheme {
         case .light: content.hidden()
         case .dark, nil: content

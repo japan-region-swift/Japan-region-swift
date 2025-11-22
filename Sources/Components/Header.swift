@@ -11,7 +11,7 @@ import Ignite
 struct Header: HTML {
     var body: some HTML {
         NavigationBar(logo: logo) {
-            Link(discord, target: "https://tret.jp/JapanRegionSwiftDiscord")
+            Link(discord, target: "/join")
         }
         .navigationItemAlignment(.trailing)
         .position(.fixedTop)

@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct BlogFeed: Sendable {
-    let url: URL
-    let title: String
-    let imageURL: URL?
-    let date: Date
+nonisolated struct BlogFeed: Sendable {
+    var url: URL
+    var title: String
+    var imageURL: URL?
+    var date: Date
 }

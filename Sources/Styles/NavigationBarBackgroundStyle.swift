@@ -9,12 +9,16 @@ import Foundation
 import Ignite
 
 struct NavigationBarBackgroundStyle: Style {
-    func style(content: StyledHTML, environment: EnvironmentConditions)
-        -> StyledHTML
-    {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
         switch environment.colorScheme {
-        case .light, nil: content.background(Color(hex: "#F7F7F7"))
-        case .dark: content.background(Color(hex: "#2A2A2A"))
+        case .light, nil:
+            content
+                .background(Color(white: 1, opacity: 0.5))
+                .style(.backdropFilter, "blur(20px)")
+        case .dark:
+            content
+                .background(Color(white: 0, opacity: 0.3))
+                .style(.backdropFilter, "blur(20px)")
         }
     }
 }
