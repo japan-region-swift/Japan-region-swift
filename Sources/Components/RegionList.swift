@@ -90,7 +90,7 @@ struct RegionList: HTML {
                     }
                     .padding(10)
                     .cornerRadius(5)
-                    .border(.white.opacity(0.15))
+                    .border(.gray.opacity(0.5))
                 }
                 .padding(5)
             }

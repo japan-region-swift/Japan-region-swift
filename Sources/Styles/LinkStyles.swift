@@ -11,6 +11,7 @@ import Ignite
 nonisolated enum LinkRole: Sendable {
     case swiftPrimary
     case discordPrimary
+    case notePrimary
 }
 
 extension Link {
@@ -31,6 +32,14 @@ extension Link {
                     effect
                         .style(.backgroundColor, "#2939EE")
                         .style(.borderColor, "#2939EE")
+                }
+        case .notePrimary:
+            self.role(.primary)
+                .style(.notePrimary)
+                .hoverEffect { effect in
+                    effect
+                        .style(.backgroundColor, "#1E7B65")
+                        .style(.borderColor, "#1E7B65")
                 }
         }
     }
@@ -60,4 +69,17 @@ private struct DiscordPrimaryLinkStyle: Style {
 
 extension Style where Self == DiscordPrimaryLinkStyle {
     fileprivate static var discordPrimary: Self { Self() }
+}
+
+private struct NotePrimaryLinkStyle: Style {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
+        content
+            .style(.color, "#FFFFFF")
+            .style(.backgroundColor, "#2CB696")
+            .style(.borderColor, "#2CB696")
+    }
+}
+
+extension Style where Self == NotePrimaryLinkStyle {
+    fileprivate static var notePrimary: Self { Self() }
 }
