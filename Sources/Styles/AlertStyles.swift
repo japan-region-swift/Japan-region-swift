@@ -10,6 +10,7 @@ import Ignite
 
 enum AlertRole: Sendable {
     case swiftPrimary
+    case notePrimary
 }
 
 extension Alert {
@@ -18,6 +19,9 @@ extension Alert {
         case .swiftPrimary:
             self.role(.primary)
                 .style(.swiftPrimary)
+        case .notePrimary:
+            self.role(.primary)
+                .style(.notePrimary)
         }
     }
 }
@@ -41,4 +45,17 @@ private struct SwiftPrimaryAlertStyle: Style {
 
 extension Style where Self == SwiftPrimaryAlertStyle {
     fileprivate static var swiftPrimary: Self { Self() }
+}
+
+private struct NotePrimaryAlertStyle: Style {
+    func style(content: StyledHTML, environment: EnvironmentConditions) -> StyledHTML {
+        content
+            .style(.color, "rgb(44, 182, 150)")
+            .style(.backgroundColor, "rgb(44, 182, 150, 0.1)")
+            .style(.borderColor, "rgb(44, 182, 150, 0.15)")
+    }
+}
+
+extension Style where Self == NotePrimaryAlertStyle {
+    fileprivate static var notePrimary: Self { Self() }
 }

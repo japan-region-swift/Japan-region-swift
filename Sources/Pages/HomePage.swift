@@ -18,8 +18,8 @@ struct HomePage: StaticPage {
         Divider()
         UpcomingEventList()
         Divider()
-        RegionList()
-        Divider()
         BlogList()
+        Divider()
+        RegionList()
     }
 }
