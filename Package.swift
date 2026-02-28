@@ -8,7 +8,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/twostraws/Ignite",
-            revision: "10ae60a317d6a96cccf8a575f1444070eddf4836"
+            revision: "7486c3fe4e8fc9956d585f945c886b7601e890a9"
         ),
         .package(
             url: "https://github.com/treastrain/OpenGraphReader",

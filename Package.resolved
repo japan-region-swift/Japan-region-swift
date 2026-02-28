@@ -1,12 +1,12 @@
 {
-  "originHash" : "71b8fae6ea64b5c03302966f820665d042ceef2f62bc71f158e0dd52805f77d4",
+  "originHash" : "88e7155bdbc775b7894fe48cc09de6ecea3b2c11a640807a64ced54338aac65c",
   "pins" : [
     {
       "identity" : "ignite",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/twostraws/Ignite",
       "state" : {
-        "revision" : "10ae60a317d6a96cccf8a575f1444070eddf4836"
+        "revision" : "7486c3fe4e8fc9956d585f945c886b7601e890a9"
       }
     },
     {
