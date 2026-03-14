@@ -11,7 +11,7 @@ enum RegionSwiftList {
         RegionSwift(name: "Nagoya.swift", imageFilePath: "/images/regions/nagoya.png", link: URL(string: "https://japan-region-swift.connpass.com/event/343345/")!),
     ]
 
-    struct RegionSwift {
+    struct RegionSwift: Sendable {
         let name: String
         let imageFilePath: String
         let link: URL

@@ -22,8 +22,7 @@ enum BlogPostList {
         BlogPost(displayName: "神山.swift やりきったぞーー！ 運営日記", link: URL(string: "https://note.com/akidon0000/n/n837a9ca9b1db")!),
     ]
 
-    struct BlogPost: Identifiable {
-        let id = UUID()
+    struct BlogPost: Sendable {
         let displayName: String
         let link: URL
     }

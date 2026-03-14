@@ -1,25 +1,25 @@
 import Foundation
 import Ignite
 
-struct PhotoCarouselComponent: Component {
-    func body(context: PublishingContext) -> [any PageElement] {
+struct PhotoCarouselComponent: HTML {
+    var body: some HTML {
         Carousel {
-                slide(imagePath: "/images/photos/japan-region-swift.png")
-                slide(imagePath: "/images/photos/kamiyama.png")
-                slide(imagePath: "/images/photos/chiba.png")
-                slide(imagePath: "/images/photos/kanagawa.png")
-                slide(imagePath: "/images/photos/chiba2.png")
-                slide(imagePath: "/images/photos/osaka.png")
-                slide(imagePath: "/images/photos/minokamo.png")
-                slide(imagePath: "/images/photos/nagoya.png")
-                slide(imagePath: "/images/photos/hakata.png")
-                slide(imagePath: "/images/photos/kanagawa2.png")
-            }
-            .carouselStyle(.crossfade)
-            .padding(.top, 60)
+            slide(imagePath: "/images/photos/japan-region-swift.png")
+            slide(imagePath: "/images/photos/kamiyama.png")
+            slide(imagePath: "/images/photos/chiba.png")
+            slide(imagePath: "/images/photos/kanagawa.png")
+            slide(imagePath: "/images/photos/chiba2.png")
+            slide(imagePath: "/images/photos/osaka.png")
+            slide(imagePath: "/images/photos/minokamo.png")
+            slide(imagePath: "/images/photos/nagoya.png")
+            slide(imagePath: "/images/photos/hakata.png")
+            slide(imagePath: "/images/photos/kanagawa2.png")
+        }
+        .carouselStyle(.crossfade)
+        .padding(.top, 60)
     }
-}
 
-private func slide(imagePath: String) -> Slide {
-    Slide(background: imagePath)
+    private func slide(imagePath: String) -> Slide {
+        Slide(background: imagePath)
+    }
 }

@@ -16,7 +16,7 @@ enum EventList {
         Event(name: "神山.swift #1", link: URL(string: "https://kamiyama-swift.connpass.com/event/319105/")!),
     ]
 
-    struct Event {
+    struct Event: Sendable {
         let name: String
         let link: URL
     }

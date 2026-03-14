@@ -1,6 +1,7 @@
 import Foundation
 import Ignite
 
+@MainActor
 enum LanguageType: String {
     case english = "English"
     case japanese = "Japanese"

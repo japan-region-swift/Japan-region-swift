@@ -1,23 +1,18 @@
 import Foundation
 import Ignite
 
-struct BlogsComponent: Component {
+struct BlogsComponent: HTML {
     let navbar: NavBarModel
 
-    func body(context: PublishingContext) -> [any PageElement] {
+    var body: some HTML {
         Text("Blogs")
             .font(.title2)
             .id(NavigationOptions.blog.rawValue)
         List {
-            Group {
-                for post in BlogPostList.posts {
-                    Link(target: post.link.absoluteString) {
-                        Text(post.displayName)
-                            .font(.title4)
-                    }
-                }
+            for post in BlogPostList.posts {
+                Link(post.displayName, target: post.link.absoluteString)
             }
         }
-        .listStyle(.ordered(.default))
+        .listMarkerStyle(.ordered(.automatic))
     }
 }

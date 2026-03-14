@@ -1,20 +1,18 @@
 import Foundation
 import Ignite
 
-struct NavBar: Component {
+struct NavBar: HTML {
     let model: JapanRegionSwiftModel
     let language: LanguageType
 
-    func body(context: PublishingContext) -> [any PageElement] {
-        NavigationBar(logo: logo) {
+    var body: some HTML {
+        NavigationBar {
             for option in NavigationOptions.allCases {
                 option.link(model: model)
             }
-            Link(target: language.targetPage) {
-                Text("\(language.flag) \(model.language)")
-                    .margin(.none)
-                    .foregroundStyle(.primaryColor)
-            }
+            Link("\(language.flag) \(model.language)", target: language.targetPage)
+        } logo: {
+            logo
         }
         .navigationItemAlignment(.trailing)
         .navigationBarStyle(.dark)
@@ -22,8 +20,8 @@ struct NavBar: Component {
         .position(.fixedTop)
     }
 
-    private var logo: any InlineElement {
-        Text(model.name)
+    private var logo: some InlineElement {
+        Span(model.name)
             .fontWeight(.bold)
             .margin(.none)
             .font(.title4)

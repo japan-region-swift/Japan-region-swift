@@ -1,23 +1,20 @@
 import Foundation
 import Ignite
 
-struct RegionSwiftComponent: Component {
-    func body(context: PublishingContext) -> [any PageElement] {
+struct RegionSwiftComponent: HTML {
+    var body: some HTML {
         Text("Community")
             .font(.title2)
             .id(NavigationOptions.regionSwift.rawValue)
-        Group {
+        Grid {
             for region in RegionSwiftList.regions {
-                    Link(target: region.link.absoluteString) {
-                        Text(region.name)
-                            .font(.title4)
-                    }
-                    Image(region.imageFilePath)
-                        .resizable()
-                        .aspectRatio(.r16x9, contentMode: .fit)
-                        .margin(.bottom, 12)
+                Card(imageName: region.imageFilePath) {
+                    Link(region.name, target: region.link.absoluteString)
+                        .font(.title4)
+                }
             }
         }
+        .columns(3)
         .padding(.top, 20)
     }
 }

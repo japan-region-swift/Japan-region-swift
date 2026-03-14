@@ -4,7 +4,7 @@ import Ignite
 @main
 struct IgniteWebsite {
     static func main() async {
-        let site = JapanRegionSwiftSite()
+        var site = JapanRegionSwiftSite()
 
         do {
             try await site.publish()
@@ -18,15 +18,15 @@ struct JapanRegionSwiftSite: Site {
     var name = "Japan-region.swift"
     var titleSuffix = " – Swift Region Events in Japan"
     var url = URL(string: "https://japan-region-swift.github.io/Japan-region-swift")!
-    // var url =  URL(StaticString(stringLiteral: "http://localhost:8000"))
-    var builtInIconsEnabled = true
-    var pageWidth = 12
+    var builtInIconsEnabled: BootstrapOptions = .localBootstrap
     var favicon = URL(string: "/images/favicon.png")
     var author = "japan-region.swift organization"
 
+    var darkTheme: (any Theme)? = nil
     var homePage = Jp()
-    var theme = MyTheme()
-    var pages: [any StaticPage] {
+    var layout = MainLayout()
+
+    var staticPages: [any StaticPage] {
         Jp()
         En()
     }

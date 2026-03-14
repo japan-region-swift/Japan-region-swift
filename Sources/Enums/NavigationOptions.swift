@@ -1,6 +1,7 @@
 import Foundation
 import Ignite
 
+@MainActor
 enum NavigationOptions: String, CaseIterable {
     case connpass
     case event
@@ -19,16 +20,9 @@ enum NavigationOptions: String, CaseIterable {
     func link(model: JapanRegionSwiftModel) -> Link {
         switch self {
             case .event, .blog, .regionSwift:
-            Link(target: "#\(rawValue)") {
-                Text(title(model: model))
-                    .margin(.none)
-                    .foregroundStyle(.primaryColor)
-            }
-            case .connpass: Link(target: "https://japan-region-swift.connpass.com") {
-                Text(title(model: model))
-                    .margin(.none)
-                    .foregroundStyle(.primaryColor)
-            }
+            Link(title(model: model), target: "#\(rawValue)")
+            case .connpass:
+            Link(title(model: model), target: "https://japan-region-swift.connpass.com")
         }
     }
 }

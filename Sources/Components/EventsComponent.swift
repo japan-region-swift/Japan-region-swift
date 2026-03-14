@@ -1,24 +1,19 @@
 import Foundation
 import Ignite
 
-struct EventsComponent: Component {
+struct EventsComponent: HTML {
     let eventModel: EventModel
 
-    func body(context: PublishingContext) -> [any PageElement] {
+    var body: some HTML {
         Text(eventModel.title)
             .font(.title2)
             .id(NavigationOptions.event.rawValue)
             .padding(.top, 20)
         List {
-            Group {
-                for event in EventList.events {
-                    Link(target: event.link.absoluteString) {
-                        Text(event.name)
-                            .font(.title4)
-                    }
-                }
+            for event in EventList.events {
+                Link(event.name, target: event.link.absoluteString)
             }
         }
-        .listStyle(.ordered(.default))
+        .listMarkerStyle(.ordered(.automatic))
     }
 }
