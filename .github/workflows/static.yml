@@ -23,8 +23,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check Swift version
+        run: swift --version
+
       - name: Build site
         run: swift run Japan-Region-Swift
+
+      - name: Verify Build output
+        run: |
+          echo "=== Build directory ==="
+          ls -R Build/
+          echo "=== Build/images check ==="
+          ls -R Build/images/ || echo "No images directory found"
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
