@@ -32,7 +32,7 @@ enum BlogPostList {
         // Okinawa.swift
         BlogPost(displayName: "Okinawa.swift×Swift・Kotlin愛好会コラボ合宿レポート", link: URL(string: "https://note.com/entaku0818/n/ncf7535d95737?app_launch=false")!),
         // Hakodate.swift
-        BlogPost(displayName: "函館でHakodate.swiftを開催しました", link: URL(string: "https://yamakentoc.hatenablog.com/entry/2026/03/08/150555")!),
+        BlogPost(displayName: "Hakodate.swiftを開催しました", link: URL(string: "https://yamakentoc.hatenablog.com/entry/2026/03/08/150555")!),
     ]
 
     struct BlogPost: Sendable {
