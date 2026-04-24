@@ -13,6 +13,7 @@ struct PhotoCarouselComponent: HTML {
             slide(imagePath: "/Japan-region-swift/images/photos/minokamo.png")
             slide(imagePath: "/Japan-region-swift/images/photos/nagoya.png")
             slide(imagePath: "/Japan-region-swift/images/photos/hakata.png")
+            slide(imagePath: "/Japan-region-swift/images/photos/tamariver.png")
             slide(imagePath: "/Japan-region-swift/images/photos/kanagawa2.png")
             slide(imagePath: "/Japan-region-swift/images/photos/okinawa1.jpeg")
             slide(imagePath: "/Japan-region-swift/images/photos/hakodate1.jpeg")
