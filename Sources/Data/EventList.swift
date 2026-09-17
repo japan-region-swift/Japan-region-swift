@@ -16,6 +16,8 @@ enum EventList {
         Event(name: "Hakodate.swift #1", link: URL(string: "https://japan-region-swift.connpass.com/event/371217/")!),
         Event(name: "Nagoya.swift #2", link: URL(string: "https://japan-region-swift.connpass.com/event/376480/")!),
         Event(name: "Sapporo.swift #1", link: URL(string: "https://japan-region-swift.connpass.com/event/393404/")!),
+        Event(name: "TamaRiver.swift #2", link: URL(string: "https://japan-region-swift.connpass.com/event/394189/")!),
+        Event(name: "Okinawa.swift #2", link: URL(string: "https://japan-region-swift.connpass.com/event/405463/")!),
     ]
 
     struct Event: Sendable {
