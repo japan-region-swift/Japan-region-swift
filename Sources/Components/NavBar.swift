@@ -29,7 +29,7 @@ struct NavBar: HTML {
     }
 
     private var logo: some InlineElement {
-        Image("/images/logo.svg")
+        Image("\(site.url.path)/images/logo.svg")
         .accessibilityLabel("Japan-\\(region).swift")
         .resizable()
         .frame(height: 32)
