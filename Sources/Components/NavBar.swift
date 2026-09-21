@@ -29,10 +29,9 @@ struct NavBar: HTML {
     }
 
     private var logo: some InlineElement {
-        Span(model.name)
-            .fontWeight(.bold)
-            .margin(.none)
-            .font(.title4)
-            .foregroundStyle(.primaryColor)
+        Image("/images/logo.svg")
+        .accessibilityLabel("Japan-\\(region).swift")
+        .resizable()
+        .frame(height: 32)
     }
 }
