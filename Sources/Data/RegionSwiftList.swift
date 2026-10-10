@@ -13,6 +13,7 @@ enum RegionSwiftList {
         RegionSwift(name: "Okinawa.swift", imageFilePath: "/Japan-region-swift/images/regions/okinawaswift.jpg", link: URL(string: "https://japan-region-swift.connpass.com/event/370422/")!),
         RegionSwift(name: "Hakodate.swift", imageFilePath: "/Japan-region-swift/images/regions/hakodateswift.png", link: URL(string: "https://japan-region-swift.connpass.com/event/371217/")!),
         RegionSwift(name: "Sapporo.swift", imageFilePath: "/Japan-region-swift/images/regions/sapporoswift.png", link: URL(string: "https://japan-region-swift.connpass.com/event/393404/")!),
+        RegionSwift(name: "Saitama.swift", imageFilePath: "/Japan-region-swift/images/regions/saitama.png", link: URL(string: "https://japan-region-swift.connpass.com/event/397259/")!),
     ]
 
     struct RegionSwift: Sendable {
