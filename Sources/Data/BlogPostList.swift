@@ -39,6 +39,7 @@ enum BlogPostList {
         BlogPost(displayName: "Nagoya.swift＃2に行きました！", link: URL(string: "https://note.com/totokit4/n/n5b3cf7a2a252?sub_rt=share_sb")!),
         // Sapporo.swift #1
         BlogPost(displayName: "Sapporo.swift #1 を開催しました！", link: URL(string: "https://note.com/shita_2/n/n5b1579e99755")!),
+        BlogPost(displayName: "Sapporo.swift #1 を開催しました", link: URL(string: "https://note.com/myammm_/n/n2d116ac4b9a0")!),
     ]
 
     struct BlogPost: Sendable {
