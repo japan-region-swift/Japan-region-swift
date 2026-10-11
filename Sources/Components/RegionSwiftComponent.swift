@@ -8,10 +8,20 @@ struct RegionSwiftComponent: HTML {
             .id(NavigationOptions.regionSwift.rawValue)
         Grid {
             for region in RegionSwiftList.regions {
-                Card(imageName: region.imageFilePath) {
-                    Link(region.name, target: region.link.absoluteString)
-                        .font(.title4)
+                Section {
+                    // Ignite's image variant lookup treats the deployment subpath as an asset directory.
+                    Tag("img")
+                        .attribute("src", region.imageFilePath)
+                        .attribute("alt", "")
+                        .class("card-img-top")
+                    Section {
+                        Link(region.name, target: region.link.absoluteString)
+                            .font(.title4)
+                            .class("card-link")
+                    }
+                    .class("card-body")
                 }
+                .class("card")
             }
         }
         .columns(3)
