@@ -21,6 +21,8 @@ struct PhotoCarouselComponent: HTML {
         "/Japan-region-swift/images/photos/sapporo1.png",
         "/Japan-region-swift/images/photos/tamariver2.png",
         "/Japan-region-swift/images/photos/okinawa2.png",
+        "/Japan-region-swift/images/photos/kanagawa3.jpg",
+        "/Japan-region-swift/images/photos/saitama1.jpg",
     ]
 
     var body: some HTML {
